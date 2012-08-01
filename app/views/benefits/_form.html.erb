@@ -12,30 +12,30 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "Nombre" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description, "Descripción" %><br />
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :begin_date %><br />
+    <%= f.label :begin_date, "Fecha de inicio" %><br />
     <%= f.date_select :begin_date %>
   </div>
   <div class="field">
-    <%= f.label :end_date %><br />
+    <%= f.label :end_date, "Fecha Final" %><br />
     <%= f.date_select :end_date %>
   </div>
   <div class="field">
-    <%= f.label :business_id %><br />
-    <%= f.text_field :business_id %>
+    <%= f.label :business_id, "Negocio" %><br />
+    <%= f.select :business_id, @business %>
   </div>
   <div class="field">
-    <%= f.label :benefit_type_id %><br />
-    <%= f.text_field :benefit_type_id %>
+    <%= f.label :benefit_type_id, "Tipo de beneficio" %><br />
+    <%= f.select :benefit_type_id, @benefit_types %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar" %>
   </div>
 <% end %>

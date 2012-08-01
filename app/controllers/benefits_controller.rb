@@ -26,15 +26,22 @@ class BenefitsController < ApplicationController
   def new
     @benefit = Benefit.new
 
+	form_data
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @benefit }
     end
   end
 
+  def form_data
+    @benefit_types = BenefitType.all.collect {|bt| [bt.name, bt.id]}
+    @business = Business.all.collect {|b| [b.name, b.id]}
+  end
+
   # GET /benefits/1/edit
   def edit
     @benefit = Benefit.find(params[:id])
+	form_data
   end
 
   # POST /benefits

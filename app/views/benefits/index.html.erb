@@ -1,13 +1,12 @@
 <h1>Listing benefits</h1>
 
-<table>
+<table class="table">
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Begin date</th>
-    <th>End date</th>
-    <th>Business</th>
-    <th>Benefit type</th>
+    <th>Nombre</th>
+    <th>Inicio</th>
+    <th>Fin</th>
+    <th>Negocio</th>
+    <th>Tipo</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,14 +15,13 @@
 <% @benefits.each do |benefit| %>
   <tr>
     <td><%= benefit.name %></td>
-    <td><%= benefit.description %></td>
     <td><%= benefit.begin_date %></td>
     <td><%= benefit.end_date %></td>
-    <td><%= benefit.business_id %></td>
-    <td><%= benefit.benefit_type_id %></td>
-    <td><%= link_to 'Show', benefit %></td>
-    <td><%= link_to 'Edit', edit_benefit_path(benefit) %></td>
-    <td><%= link_to 'Destroy', benefit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= benefit.business.name %></td>
+    <td><%= benefit.benefit_type.name %></td>
+    <td><%= link_to 'Ver', benefit %></td>
+    <td><%= link_to 'Modificar', edit_benefit_path(benefit) %></td>
+    <td><%= link_to 'Elminiar', benefit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
