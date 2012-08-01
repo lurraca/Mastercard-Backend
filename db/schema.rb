@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801042411) do
+ActiveRecord::Schema.define(:version => 20120801043442) do
 
   create_table "benefit_types", :force => true do |t|
     t.string   "name"
@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(:version => 20120801042411) do
     t.text     "description"
     t.date     "begin_date"
     t.date     "end_date"
-    t.integer  "business_id_id"
-    t.integer  "benefit_type_id_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.integer  "business_id"
+    t.integer  "benefit_type_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
-  add_index "benefits", ["benefit_type_id_id"], :name => "index_benefits_on_benefit_type_id_id"
-  add_index "benefits", ["business_id_id"], :name => "index_benefits_on_business_id_id"
+  add_index "benefits", ["benefit_type_id"], :name => "index_benefits_on_benefit_type_id_id"
+  add_index "benefits", ["business_id"], :name => "index_benefits_on_business_id_id"
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
