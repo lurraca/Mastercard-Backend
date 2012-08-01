@@ -1,30 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Nombre:</b>
   <%= @business.name %>
 </p>
 
 <p>
-  <b>Category:</b>
+  <b>Categoría:</b>
   <%= @business.category_id %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b>Dirección:</b>
   <%= @business.address %>
 </p>
 
 <p>
-  <b>Phone:</b>
+  <b>Telefono:</b>
   <%= @business.phone %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Descripción:</b>
   <%= @business.description %>
 </p>
+<p>
+  <b>Logo:</b>
+<%= image_tag @business.logo.url %>
+</p>
 
-
-<%= link_to 'Edit', edit_business_path(@business) %> |
-<%= link_to 'Back', businesses_path %>
+<%= link_to 'Editar', edit_business_path(@business) %> |
+<%= link_to 'Atras', businesses_path %>

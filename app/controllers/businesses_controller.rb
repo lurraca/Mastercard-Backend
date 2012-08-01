@@ -14,7 +14,6 @@ class BusinessesController < ApplicationController
   # GET /businesses/1.json
   def show
     @business = Business.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @business }
@@ -40,7 +39,7 @@ class BusinessesController < ApplicationController
   # POST /businesses
   # POST /businesses.json
   def create
-    @business = Business.new(params[:business])
+    @business = Business.create(params[:business])
 
     respond_to do |format|
       if @business.save
