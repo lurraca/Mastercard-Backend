@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  begin_date: 2012-08-01
+  end_date: 2012-08-01
+  business_id: 
+  benefit_type_id: 
+
+two:
+  name: MyString
+  description: MyText
+  begin_date: 2012-08-01
+  end_date: 2012-08-01
+  business_id: 
+  benefit_type_id: 

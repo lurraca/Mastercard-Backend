@@ -1,4 +1,12 @@
 Mastercard::Application.routes.draw do
+  resources :benefit_types
+
+  resources :benefits
+
+  resources :categories
+
+  resources :businesses
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

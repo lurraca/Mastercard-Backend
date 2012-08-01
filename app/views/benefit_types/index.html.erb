@@ -1,0 +1,23 @@
+<h1>Listing benefit_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @benefit_types.each do |benefit_type| %>
+  <tr>
+    <td><%= benefit_type.name %></td>
+    <td><%= link_to 'Show', benefit_type %></td>
+    <td><%= link_to 'Edit', edit_benefit_type_path(benefit_type) %></td>
+    <td><%= link_to 'Destroy', benefit_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Benefit type', new_benefit_type_path %>
