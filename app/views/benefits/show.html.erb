@@ -1,35 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Nombre:</b>
   <%= @benefit.name %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Descripción:</b>
   <%= @benefit.description %>
 </p>
 
 <p>
-  <b>Begin date:</b>
+  <b>Fecha de inicio:</b>
   <%= @benefit.begin_date %>
 </p>
 
 <p>
-  <b>End date:</b>
+  <b>Fecha de finalización:</b>
   <%= @benefit.end_date %>
 </p>
 
 <p>
-  <b>Business:</b>
-  <%= @benefit.business_id %>
+  <b>Negocio:</b>
+  <%= @benefit.business.name %>
 </p>
 
 <p>
-  <b>Benefit type:</b>
-  <%= @benefit.benefit_type_id %>
+  <b>Tipo de beneficio:</b>
+  <%= @benefit.benefit_type.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_benefit_path(@benefit) %> |
-<%= link_to 'Back', benefits_path %>
+<%= link_to 'Editar', edit_benefit_path(@benefit) %> |
+<%= link_to 'Volver', benefits_path %>
