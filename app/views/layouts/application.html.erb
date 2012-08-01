@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render :partial => 'layouts/navbar' %>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <%= render :partial => 'layouts/sidebar' %>
 
-<%= yield %>
-
+      <div class="span10">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,4 +1,6 @@
 Mastercard::Application.routes.draw do
+  get "home/index"
+
   resources :benefit_types
 
   resources :benefits
@@ -6,7 +8,7 @@ Mastercard::Application.routes.draw do
   resources :categories
 
   resources :businesses
-
+  root :to => 'home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
