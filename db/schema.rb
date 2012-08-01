@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801021847) do
+ActiveRecord::Schema.define(:version => 20120801042411) do
 
   create_table "benefit_types", :force => true do |t|
     t.string   "name"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20120801021847) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
-    t.integer  "category_id_id"
+    t.integer  "category_id"
     t.string   "address"
     t.string   "phone"
     t.text     "description"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20120801021847) do
     t.datetime "logo_updated_at"
   end
 
-  add_index "businesses", ["category_id_id"], :name => "index_businesses_on_category_id_id"
+  add_index "businesses", ["category_id"], :name => "index_businesses_on_category_id_id"
 
   create_table "categories", :force => true do |t|
     t.string   "name"

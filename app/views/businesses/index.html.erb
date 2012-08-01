@@ -1,12 +1,12 @@
-<h1>Listing businesses</h1>
+<h1>Listado de Negocios</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Address</th>
-    <th>Phone</th>
-    <th>Description</th>
+    <th>Nombre</th>
+    <th>Categoría</th>
+    <th>Dirección</th>
+    <th>Teléfono</th>
+    <th>Descripción</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,13 +19,13 @@
     <td><%= business.address %></td>
     <td><%= business.phone %></td>
     <td><%= business.description %></td>
-    <td><%= link_to 'Show', business %></td>
-    <td><%= link_to 'Edit', edit_business_path(business) %></td>
-    <td><%= link_to 'Destroy', business, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', business %></td>
+    <td><%= link_to 'Editat', edit_business_path(business) %></td>
+    <td><%= link_to 'Destruir', business, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Business', new_business_path %>
+<%= link_to 'Nuevo Negocio', new_business_path %>
