@@ -2,10 +2,21 @@ class BusinessesController < ApplicationController
   # GET /businesses
   # GET /businesses.json
   def index
-    @businesses = Business.all
+    @list_active = true
+    @businesses = Business.where("active = ?", @list_active)
 
     respond_to do |format|
       format.html # index.html.erb
+      format.json { render json: @businesses }
+    end
+  end
+
+  def inactive
+    @list_active = false
+    @businesses = Business.where("active = ?", @list_active)
+
+    respond_to do |format|
+      format.html { render action: "index"}
       format.json { render json: @businesses }
     end
   end
