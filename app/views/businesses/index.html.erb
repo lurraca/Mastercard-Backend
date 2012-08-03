@@ -1,5 +1,11 @@
 <h1>Listado de Negocios</h1>
 
+<% if @list_active then %>
+	<%= link_to "Ver inactivos", :controller => "businesses", :action =>"inactive"  %>
+<% else %>
+	<%=link_to "Ver activos", businesses_path%>
+<% end %>
+
 <table class="table">
   <tr>
     <th>Nombre</th>
@@ -20,7 +26,7 @@
     <td><%= business.phone %></td>
     <td><%= business.description %></td>
     <td><%= link_to 'Mostrar', business %></td>
-    <td><%= link_to 'Editat', edit_business_path(business) %></td>
+    <td><%= link_to 'Editar', edit_business_path(business) %></td>
     <td><%= link_to 'Destruir', business, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
   </tr>
 <% end %>

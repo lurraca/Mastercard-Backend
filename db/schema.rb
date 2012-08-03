@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801043442) do
+ActiveRecord::Schema.define(:version => 20120803010204) do
 
   create_table "benefit_types", :force => true do |t|
     t.string   "name"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20120801043442) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.boolean  "active"
   end
 
   add_index "businesses", ["category_id"], :name => "index_businesses_on_category_id_id"

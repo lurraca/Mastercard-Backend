@@ -1,4 +1,4 @@
-<%= form_for @business, :url => businesses_path, :html => { :multipart => true } do |f| %>
+<%= form_for @business, :url => businesses_path + (@business.nil? ? "": "/"+@business.id.to_s), :html => { :multipart => true } do |f| %>
   <% if @business.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@business.errors.count, "error") %> prohibited this business from being saved:</h2>
@@ -14,6 +14,10 @@
   <div class="field">
     <%= f.label :name, "Nombre" %><br />
     <%= f.text_field :name %>
+  </div>
+  <div class="field">
+  	<%= f.label :active, "Activo" %>
+  	<%= f.check_box :active %>
   </div>
   <div class="field">
     <%= f.label :category_id, "Categoria" %><br />
