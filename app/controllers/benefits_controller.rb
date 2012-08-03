@@ -23,10 +23,6 @@ class BenefitsController < ApplicationController
 
   def by_business
     @benefits = Benefit.where("business_id = ?", params[:id])
-    
-   respond_to do |format|
-      format.json { render json: @benefits }
-   end
   end
 
   # GET /benefits/new
