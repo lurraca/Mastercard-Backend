@@ -3,6 +3,7 @@ Mastercard::Application.routes.draw do
 
   resources :benefit_types
 
+  match "benefits/by_business/:id" => "benefits#by_business"
   resources :benefits
 
   resources :categories
