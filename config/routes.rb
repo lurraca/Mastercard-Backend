@@ -9,6 +9,7 @@ Mastercard::Application.routes.draw do
 
   match "businesses/inactive" => 'businesses#inactive'
   resources :businesses
+  get "/businesses/by_category/:id" => 'businesses#by_category'
 
   root :to => 'home#index'
   # The priority is based upon order of creation:

@@ -21,7 +21,7 @@
 <% @businesses.each do |business| %>
   <tr>
     <td><%= business.name %></td>
-    <td><%= business.category_id %></td>
+    <td><%= business.category.name %></td>
     <td><%= business.address %></td>
     <td><%= business.phone %></td>
     <td><%= business.description %></td>

@@ -11,6 +11,14 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def by_category
+    @businesses = Business.by_category(params[:id])
+    respond_to do |format|
+      format.html {render action: "index"}
+      format.json
+    end
+  end
+
   def inactive
     @list_active = false
     @businesses = Business.where("active = ?", @list_active)
