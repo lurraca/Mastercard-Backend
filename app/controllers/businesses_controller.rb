@@ -98,4 +98,9 @@ class BusinessesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def from_list
+    @list = params[:list].split(',')
+    @businesses = Business.where(:id => @list)
+  end
 end

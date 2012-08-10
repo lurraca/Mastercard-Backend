@@ -8,6 +8,9 @@ Mastercard::Application.routes.draw do
 
   resources :categories
 
+  post "benefits/active/all" => "benefits#all_active"
+  get "benefits/active/all" => "benefits#all_active"
+  get "businesses/from_list/:list" => "businesses#from_list"
   match "businesses/inactive" => 'businesses#inactive'
   resources :businesses
   get "/businesses/by_category/:id" => 'businesses#by_category'

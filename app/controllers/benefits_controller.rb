@@ -91,4 +91,8 @@ class BenefitsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def all_active
+    @benefits = Benefit.where{(begin_date <= Date.today) & (end_date >= Date.today)}
+  end
 end

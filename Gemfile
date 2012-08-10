@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'rabl'
 gem 'yajl-ruby'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'squeel'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
