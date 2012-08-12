@@ -62,6 +62,7 @@ class BusinessesController < ApplicationController
 
     respond_to do |format|
       if @business.save
+        Version.first.increase_number
         format.html { redirect_to @business, notice: 'Business was successfully created.' }
         format.json { render json: @business, status: :created, location: @business }
       else
@@ -78,6 +79,7 @@ class BusinessesController < ApplicationController
 
     respond_to do |format|
       if @business.update_attributes(params[:business])
+        Version.first.increase_number
         format.html { redirect_to @business, notice: 'Business was successfully updated.' }
         format.json { head :no_content }
       else
@@ -92,6 +94,7 @@ class BusinessesController < ApplicationController
   def destroy
     @business = Business.find(params[:id])
     @business.destroy
+    Version.first.increase_number
 
     respond_to do |format|
       format.html { redirect_to businesses_url }

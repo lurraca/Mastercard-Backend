@@ -55,6 +55,7 @@ class BenefitsController < ApplicationController
 
     respond_to do |format|
       if @benefit.save
+        Version.first.increase_number
         format.html { redirect_to @benefit, notice: 'Benefit was successfully created.' }
         format.json { render json: @benefit, status: :created, location: @benefit }
       else
@@ -71,6 +72,7 @@ class BenefitsController < ApplicationController
 
     respond_to do |format|
       if @benefit.update_attributes(params[:benefit])
+        Version.first.increase_number
         format.html { redirect_to @benefit, notice: 'Benefit was successfully updated.' }
         format.json { head :no_content }
       else
@@ -85,6 +87,7 @@ class BenefitsController < ApplicationController
   def destroy
     @benefit = Benefit.find(params[:id])
     @benefit.destroy
+    Version.first.increase_number
 
     respond_to do |format|
       format.html { redirect_to benefits_url }
