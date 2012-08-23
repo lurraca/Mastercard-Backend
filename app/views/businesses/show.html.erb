@@ -31,7 +31,7 @@
 </p>
 <p>
   <b>Logo:</b>
-<%= image_tag @business.logo.url %>
+<%= image_tag @business.logo.url(:thumb) %>
 </p>
 
 <%= link_to 'Editar', edit_business_path(@business) %> |

@@ -36,6 +36,7 @@
     <%= f.select :benefit_type_id, @benefit_types %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar" %>
+	  <%= f.submit "Guardar", :class=>'btn btn-inverse' %>
+	  <%= link_to 'Cancelar', benefits_path, :class=>'btn btn-danger' %>
   </div>
 <% end %>
