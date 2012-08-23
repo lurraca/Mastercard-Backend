@@ -1,21 +1,21 @@
 <%= form_for(@benefit_type) do |f| %>
   <% if @benefit_type.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@benefit_type.errors.count, "error") %> prohibited this benefit_type from being saved:</h2>
+		<div id="error_explanation">
+			<h2><%= pluralize(@benefit_type.errors.count, "error") %> prohibited this benefit_type from being saved:</h2>
 
-      <ul>
-      <% @benefit_type.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+			<ul>
+				<% @benefit_type.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+		<% end %>
+			</ul>
+		</div>
+	<% end %>
   <div class="field">
-    <%= f.label :name, "Nombre" %><br />
-    <%= f.text_field :name %>
+		<%= f.label :name, "Nombre" %><br />
+		<%= f.text_field :name %>
   </div>
-  <div class="actions">
-    <%= f.submit "Guardar" %>
+	<div class="actions">
+		<%= f.submit "Guardar", :class=>"btn btn-warning" %>
+		<%= link_to 'Cancelar', benefit_types_path, :class=>"btn btn-danger" %>
   </div>
 <% end %>

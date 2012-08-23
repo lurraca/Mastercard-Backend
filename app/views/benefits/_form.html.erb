@@ -29,11 +29,11 @@
   </div>
   <div class="field">
     <%= f.label :business_id, "Negocio" %><br />
-    <%= f.select :business_id, @business %>
+	<%= f.select :business_id, @business, {:include_blank => true} %>
   </div>
   <div class="field">
     <%= f.label :benefit_type_id, "Tipo de beneficio" %><br />
-    <%= f.select :benefit_type_id, @benefit_types %>
+	<%= f.select :benefit_type_id, @benefit_types, {:include_blank => true} %>
   </div>
   <div class="actions">
 	  <%= f.submit "Guardar", :class=>'btn btn-inverse' %>

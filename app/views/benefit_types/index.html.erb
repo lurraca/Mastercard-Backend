@@ -1,6 +1,6 @@
 <h1>Listado de tipos de benficios</h1>
 
-<table class="table">
+<table class="table table-bordered table-condensed">
   <tr>
     <th>Nombre</th>
     <th></th>
@@ -11,13 +11,13 @@
 <% @benefit_types.each do |benefit_type| %>
   <tr>
     <td><%= benefit_type.name %></td>
-    <td><%= link_to 'Ver', benefit_type %></td>
-    <td><%= link_to 'Editar', edit_benefit_type_path(benefit_type) %></td>
-    <td><%= link_to 'Eliminar', benefit_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td><%= link_to 'Mostrar', benefit_type,:class=>"btn btn-info" %></td>
+	<td><%= link_to 'Editar', edit_benefit_type_path(benefit_type), :class=>"btn btn-inverse" %></td>
+	<td><%= link_to 'Eliminar', benefit_type, :class=>"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Crear tipo de beneficio', new_benefit_type_path %>
+<%= link_to 'Crear tipo de beneficio', new_benefit_type_path, :class=>"btn btn-success" %>

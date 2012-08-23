@@ -16,6 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar" %>
+	<%= f.submit "Guardar", :class=>"btn btn-warning" %>
+	<%= link_to 'Cancelar', categories_path, :class=>"btn btn-danger" %>
   </div>
 <% end %>

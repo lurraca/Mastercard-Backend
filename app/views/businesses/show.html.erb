@@ -34,5 +34,5 @@
 <%= image_tag @business.logo.url(:thumb) %>
 </p>
 
-<%= link_to 'Editar', edit_business_path(@business) %> |
-<%= link_to 'Atras', businesses_path %>
+<%= link_to 'Editar', edit_business_path(@business),:class=>"btn btn-warning" %> |
+<%= link_to 'Atras', businesses_path, :class=>"btn btn-danger" %>

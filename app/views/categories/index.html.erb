@@ -1,6 +1,6 @@
 <h1>Listado de categorias</h1>
 
-<table class="table">
+<table class="table table-bordered table-condensed">
   <tr>
     <th>Nombre</th>
     <th></th>
@@ -11,13 +11,13 @@
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    <td><%= link_to 'Mostrar', category %></td>
-    <td><%= link_to 'Editar', edit_category_path(category) %></td>
-    <td><%= link_to 'Destruir', category, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+	<td><%= link_to 'Mostrar', category, :class=>"btn btn-info" %></td>
+	<td><%= link_to 'Editar', edit_category_path(category), :class=>"btn btn-inverse" %></td>
+	<td><%= link_to 'Destruir', category, :class=>"btn btn-danger", method: :delete, data: { confirm: 'Esta seguro?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Nueva Categoria', new_category_path %>
+<%= link_to 'Nueva Categoria', new_category_path, :class=>"btn btn-success" %>
