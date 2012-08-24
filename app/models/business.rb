@@ -4,7 +4,7 @@ class Business < ActiveRecord::Base
   has_attached_file :logo, :styles => { :thumb => "175x175!" }
   validates :address, :presence => true
   validates :category_id, :presence => true
-  validates :descrtiption, :presence => true
+  validates :description, :presence => true
   validates :name, :presence => true
   validates :logo, :presence => true
 
