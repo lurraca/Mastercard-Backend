@@ -1,6 +1,7 @@
 class BusinessesController < ApplicationController
   # GET /businesses
   # GET /businesses.json
+  before_filter :authenticate_user!, :except => [:by_category, :from_list]
   def index
     @list_active = true
     @businesses = Business.where("active = ?", @list_active)

@@ -1,6 +1,7 @@
 class BenefitTypesController < ApplicationController
   # GET /benefit_types
   # GET /benefit_types.json
+  before_filter :authenticate_user!
   def index
     @benefit_types = BenefitType.all
 

@@ -3,6 +3,7 @@
     <div class="container">
       <%= image_tag("mastercardlogo.png", :class=>"mtc_logo") %>
       <a class="brand" href="/">Mastercard Backend</a>
+      <%= link_to "Cerrar Sesión", destroy_user_session_path, :style=> "color:white;font-weight: bold; float:right;", :method => :delete %>
     </div>
   </div>
 </div>

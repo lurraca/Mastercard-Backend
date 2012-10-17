@@ -1,6 +1,7 @@
 class BenefitsController < ApplicationController
   # GET /benefits
   # GET /benefits.json
+  before_filter :authenticate_user!, :except => [:by_business, :all_active]
   def index
     @benefits = Benefit.all
 
