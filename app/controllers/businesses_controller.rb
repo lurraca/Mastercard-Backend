@@ -104,6 +104,6 @@ class BusinessesController < ApplicationController
 
   def from_list
     @list = params[:list].split(',')
-    @businesses = Business.where(:id => @list)
+    @businesses = Business.where(:id => @list).order(:name)
   end
 end

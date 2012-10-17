@@ -17,7 +17,7 @@
     <td><%= benefit.name %></td>
     <td><%= benefit.begin_date %></td>
     <td><%= benefit.end_date %></td>
-    <td><%= benefit.business.name %></td>
+    <td><%= benefit.business.name unless benefit.business.nil? %></td>
     <td><%= benefit.benefit_type.name %></td>
 	<td><%= link_to 'Mostrar', benefit, :class=>"btn btn-info" %></td>
 	<td><%= link_to 'Modificar', edit_benefit_path(benefit), :class=>"btn btn-inverse" %></td>
